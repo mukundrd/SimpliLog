@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         SimpliLog.initialize(this, "Dashboard", "Wallet", "Offers", "Giftcard")
 
-        val user: UserModel = UserModel("First Name", "fiUser")
+        val user = UserModel("First Name", "fiUser")
         SimpliLog.setAdditionalData(user)
 
         Logging.v(TAG, "in OnCreate");
