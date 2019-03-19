@@ -1,12 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.3.21'
     ext {
         kotlin_version = '1.3.21'
-
-        siteUrl = 'https://gitlab.com/Trayis/SimpliMVP'      // Homepage URL of the library
-        gitUrl = 'https://gitlab.com/Trayis/SimpliMVP.git'   // Git repository URL
     }
     repositories {
         google()
@@ -17,7 +13,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.3.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.2'
     }
 }
 

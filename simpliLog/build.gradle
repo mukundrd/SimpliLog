@@ -9,14 +9,12 @@ def gitUrl = 'https://gitlab.com/Trayis/SimpliLog.git'   // Git repository URL
 
 android {
     compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 22
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
 
@@ -27,42 +25,25 @@ android {
         }
     }
 
-    dataBinding {
-        enabled = true
-    }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
     lintOptions {
-        disable 'InvalidPackage'
-        disable 'RestrictedApi'
-        disable 'PrivateResource'
-        disable 'CustomViewStyleable'
-
         abortOnError false
     }
 }
 
 dependencies {
-
-    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
-
-    implementation "io.reactivex.rxjava2:rxandroid:2.1.0"
-
     testImplementation 'junit:junit:4.12'
 
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
-group = 'com.trayis'    // Maven Group ID for the artifact
-version = '0.0.1'       // This is the library version used when deploying the artifact
+group = 'com.trayis'
+version = '0.0.2'
 
 install {
     repositories.mavenInstaller {
